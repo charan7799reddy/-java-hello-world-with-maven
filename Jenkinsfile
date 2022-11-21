@@ -7,10 +7,11 @@ pipeline{
                 checkout scm
             }
         }
-        stage('build'){
-            steps{
-               bat 'mvn package'
-            }
+    stage ('Build') {
+            steps {
+                sh 'mvn clean install' 
         }
+            
     }
+  }
 }
